@@ -14,7 +14,7 @@ Follow the prompts to create the cluster.
 
 Only one cluster is created, for group A nodes, the other remaining containers (group B) are left as empty Redis nodes. They will become the active cluster when the group A nodes fail.
 
-## 2. Add a record to cluster A
+## 2. Add a record to cluster A
 
     docker exec -it redis-cluster-manual-failover_redis-a<CORRECT_SHARD_FOR_KEY>_1 redis-cli set a a
 
