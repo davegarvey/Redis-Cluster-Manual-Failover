@@ -1,0 +1,4 @@
+- two scenarios 1: failover to another cluster, 2: failover to remaining nodes (i.e. masters in dc1, replicas in dc2)
+- create scenaio where cluster has A and B setups, with 3 b nodes replicating the 3 A masters, and the other 3 b nodes replicating the first 3 b nodes
+  - try to configure such that in event of failure in A, the b nodes will perform takeover, and because of their original config the cluster is automatically set up as 3 masters with 3 replicas
+- scenario where two separate clusters and there is some form of backup/restore process between them

@@ -1,0 +1,138 @@
+services:
+  redis-a1:
+    image: redis
+    ports: 
+      - "6380:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-a1:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-a2:
+    image: redis
+    ports: 
+      - "6381:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-a2:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-a3:
+    image: redis
+    ports: 
+      - "6382:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-a3:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-a4:
+    image: redis
+    ports: 
+      - "6383:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-a4:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-a5:
+    image: redis
+    ports: 
+      - "6384:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-a5:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-a6:
+    image: redis
+    ports: 
+      - "6385:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-a6:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-b1:
+    image: redis
+    ports: 
+      - "6390:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-b1:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-b2:
+    image: redis
+    ports: 
+      - "6391:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-b2:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-b3:
+    image: redis
+    ports: 
+      - "6392:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-b3:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-b4:
+    image: redis
+    ports: 
+      - "6393:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-b4:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-b5:
+    image: redis
+    ports: 
+      - "6394:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-b5:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  redis-b6:
+    image: redis
+    ports: 
+      - "6395:6379"
+    networks:
+      - redis-cluster-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis-data-b6:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  
+volumes:
+  redis-data-a1:
+  redis-data-a2:
+  redis-data-a3:
+  redis-data-a4:
+  redis-data-a5:
+  redis-data-a6:
+  redis-data-b1:
+  redis-data-b2:
+  redis-data-b3:
+  redis-data-b4:
+  redis-data-b5:
+  redis-data-b6:
+        
+networks:
+  redis-cluster-network:
